@@ -22,10 +22,10 @@ Make sure you have installed:
 🐳 Running the Project With Docker
 
 * step1: Building the project
-    -command: docker build https://github.com/yahiab05/ros2_mini_project.git#main -t yahia_project
+    -command: `docker build https://github.com/yahiab05/ros2_mini_project.git#main -t yahia_project`
 
 * step2: Running docker image
-    -command: docker run yahia_project
+    -command: `docker run yahia_project`
 
 * the project will automatically:
     -install dependencies
