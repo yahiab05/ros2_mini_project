@@ -14,7 +14,6 @@ RUN apt-get update && rosdep update \
 
 COPY src/ src/
 
-
 SHELL ["/bin/bash", "-c"]
 
 RUN source /opt/ros/jazzy/setup.bash && \ 
@@ -25,4 +24,4 @@ RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
 
-CMD = ["ros2", "launch", "mini_project", "project.launch.py"]
+CMD ["ros2", "launch", "mini_project", "project.launch.py"]

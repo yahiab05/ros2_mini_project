@@ -7,12 +7,10 @@ def generate_launch_description():
             package='mini_project',
             executable='listener',
             output='screen',
-            prefix="gnome-terminal --"
             ),
         Node(
             package='mini_project',
             executable='talker',
             output='screen', 
-            prefix="gnome-terminal --"
             )
     ])
