@@ -15,7 +15,6 @@ class BatteryTempPublisher(Node):
         msg = Float32()
         self.increase_temp()
         msg.data = float(self.temperature)
-        self.get_logger().info(f"The current battery temperature is: {self.temperature}°C")
         self.publisher.publish(msg)
         
     def increase_temp(self):
