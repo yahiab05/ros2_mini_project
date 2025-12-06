@@ -36,7 +36,7 @@ Make sure you have installed:
 📜 What You Should See (Expected Output)
 
 Inside the running container, you will see logs such as:
-    -[listener-1] [INFO] [1765060583.304757767] [battery_temp_subscriber]: ✔: The temperature is OK at 54.0°C
-    -[listener-1] [INFO] [1765060583.804076974] [battery_temp_subscriber]: ⚠: The temperature is high but not critical at 55.0°C
+    `[listener-1] [INFO] [1765060583.304757767] [battery_temp_subscriber]: ✔: The temperature is OK at 54.0°C
+    [listener-1] [INFO] [1765060583.804076974] [battery_temp_subscriber]: ⚠: The temperature is high but not critical at 55.0°C`
 
 
