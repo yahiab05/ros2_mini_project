@@ -16,3 +16,11 @@ COPY src/ src/
 
 RUN source /opt/ros/jazzy/setup.bash && \ 
     colcon build --symlink-install --packages-select mini_project
+
+
+COPY entrypoint.sh entrypoint.sh
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
+
+CMD = ["ros2", "launch", "mini_project", "project.launch.py"]
