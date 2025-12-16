@@ -14,9 +14,7 @@ RUN apt-get update && rosdep update \
 
 COPY src/ src/
 
-SHELL ["/bin/bash", "-c"]
-
-RUN source /opt/ros/jazzy/setup.bash && \ 
+RUN . /opt/ros/jazzy/setup.sh && \ 
     colcon build --symlink-install --packages-select mini_project
 
 COPY entrypoint.sh entrypoint.sh
