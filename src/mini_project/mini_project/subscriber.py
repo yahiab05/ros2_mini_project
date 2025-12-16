@@ -35,11 +35,12 @@ class BatteryTempSubscriber(Node):
         
 
 def main():
-    rclpy.init()
-    subscriber = BatteryTempSubscriber()
-    rclpy.spin(subscriber)
-    subscriber.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.init()
+        subscriber = BatteryTempSubscriber()
+        rclpy.spin(subscriber)
+    except KeyboardInterrupt:
+        subscriber.destroy_node()
     
 if __name__ == "__main__":
     main()

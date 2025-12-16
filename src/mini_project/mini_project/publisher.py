@@ -46,11 +46,12 @@ class BatteryTempPublisher(Node):
         self.temperature -= cooling_factor
         
 def main():
-    rclpy.init()
-    publisher = BatteryTempPublisher()
-    rclpy.spin(publisher)
-    publisher.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.init()
+        publisher = BatteryTempPublisher()
+        rclpy.spin(publisher)
+    except KeyboardInterrupt:
+        publisher.destroy_node()
     
 if __name__ == "__main__":
     main()
